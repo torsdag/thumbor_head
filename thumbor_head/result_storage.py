@@ -42,7 +42,7 @@ class Storage(Storage):
 
         try:
             if self.client.fetch(request).code in (200, 302, 304):
-                return super(Storage, self).exist(
+                return super(Storage, self).is_expired(
                     path
                 )
 
